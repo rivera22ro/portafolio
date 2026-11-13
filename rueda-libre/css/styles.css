@@ -1,0 +1,390 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --Verde-Ruta: #1E7A4F;
+  --Naranja-Pedal: #F39A2B;
+  --Azul-Noche: #14213D;
+  --Crema: #FAF6EF;
+  --Gris-Asfalto: #5B6470;
+
+  --font-titulos: "Montserrat", Arial;
+  --font-texto: "Open Sans", Helvetica;
+
+  --espaciado-pequeño: 0.25rem;
+  --espaciado-mediano: 0.5rem;
+  --espaciado-grande: 1rem;
+}
+
+
+/* 1. Todos los elementos incluyen padding y border en su ancho */
+
+
+/* 2. Estilos generales */
+body {
+    margin: 0;
+    font-family: var(--font-texto);
+    background-color: var(--Crema);
+    color: var(--Azul-Noche);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* da espaciado entre los componentes */
+}
+
+/* 3. Contenido principal centrado */
+main {
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: var(--espaciado-grande);
+}
+
+/* 4. Portada: en tu HTML corresponde al header */
+header {
+    min-height: auto;
+    padding: 1rem 2rem;
+    background-color: var(--Azul-Noche);
+    color: var(--Crema);
+}
+
+
+header h1 {
+    font-family: var(--font-titulos);
+}
+
+/* La imagen del encabezado no debe desbordarse */
+header > img {
+    max-width: 50%;
+    height: auto;
+}
+
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulos);
+    font-weight: 600;
+}
+
+
+/* Listas */
+li {
+    font-family: var(--font-texto);
+    font-weight: 500;
+}
+
+
+footer {
+    background-color: var(--Azul-Noche);
+    color: var(--Crema);
+    padding: var(--espaciado-grande);
+    text-align: center;
+    font-family: var(--font-texto);
+    margin: 0;
+}
+
+footer a {
+    color: var(--Crema);
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-grande);
+    list-style: none;
+    margin: 0;
+    padding: var(--espaciado-grande) 0;
+}
+
+#menu li {
+    display: inline-block;
+}
+
+#menu a {
+    display: inline-block;
+    color: var(--Crema);
+    text-decoration: none;
+    padding: var(--espaciado-mediano);
+}
+
+#menu a.activo {
+    color: var(--Naranja-Pedal);
+    font-weight: 600;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+#menu a:focus {
+    outline: 2px solid var(--Naranja-Pedal);
+    outline-offset: 2px;
+}
+
+
+
+
+/* Botón para reservar */
+.btn-reservar {
+    display: inline-block;
+    background-color: var(--Verde-Ruta);
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Al pasar el mouse */
+.btn-reservar:hover {
+    background-color: var(--Gris-Asfalto);
+}
+
+/* Al seleccionar con el teclado */
+.btn-reservar:focus {
+    outline: 3px solid var(--Gris-Asfalto);
+    outline-offset: 3px;
+}
+
+
+
+/* Foco visible en los campos */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--Verde-Ruta);
+    outline-offset: 2px;
+}
+
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+/* Celdas y encabezados */
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid var(--Gris-Asfalto);
+    text-align: left;
+}
+
+/* Encabezados */
+th {
+    background-color: var(--Verde-Ruta);
+    color: white;
+}
+
+
+
+.principal {
+    width: 100%;
+    margin: var(--espaciado-grande) 0;
+    padding: var(--espaciado-grande);
+    border: 1px solid var(--Gris-Asfalto);
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.electrica {
+    width: 100%;
+    margin: var(--espaciado-grande) 0;
+    padding: var(--espaciado-grande);
+    border: 1px solid var(--Gris-Asfalto);
+    border-radius: 0.5rem;
+    position: relative;
+    width: 90%;
+    height: auto;
+
+    & img {
+        width: 250px;
+        height: 150px;
+    }
+    
+    & h2 {
+        text-align: center;
+    } 
+}
+.nuevo{
+        position: absolute ;
+        top: -10px;
+        background-color: red;
+        right: 0px;
+    }
+    
+
+.bicimontaña {
+    width: 100%;
+    margin: var(--espaciado-grande) 0;
+    padding: var(--espaciado-grande);
+    border: 1px solid var(--Gris-Asfalto);
+    border-radius: 0.5rem;
+    & img {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+.pasos {
+    width: 100%;
+    margin: var(--espaciado-grande) 0;
+    padding: var(--espaciado-grande);
+    border: 1px solid var(--Gris-Asfalto);
+    border-radius: 0.5rem;
+}
+
+article img {
+    display: block;
+    width: 30%;
+    max-width: 25rem;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+
+header > img {
+    display: block;
+    width: 100%;
+    max-width: 40rem;
+    height: 15rem;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+details {
+    margin-bottom: var(--espaciado-grande);
+    padding: var(--espaciado-grande);
+    border: 1px solid var(--Gris-Asfalto);
+    border-radius: 0.5rem;
+}
+
+summary {
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+aside {
+    margin: var(--espaciado-grande) 0;
+    padding: var(--espaciado-grande);
+}
+
+/* formulario */
+
+/* FORMULARIO DE RESERVAS */
+
+/* Separación general del formulario */
+#formularioAlquiler {
+    width: 80%;
+    margin: var(--espaciado-grande) auto;
+}
+
+/* Grupos de campos */
+#formularioAlquiler fieldset {
+    min-width: 0;
+    margin: 0 0 var(--espaciado-grande);
+    padding: var(--espaciado-grande);
+    border: 1px solid var(--Gris-Asfalto);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos de los grupos */
+#formularioAlquiler legend {
+    padding: 0 var(--espaciado-mediano);
+    font-family: var(--font-titulos);
+    font-weight: 500;
+}
+
+/* Etiquetas encima de los campos */
+#formularioAlquiler label {
+    display: block;
+    margin: var(--espaciado-mediano) 0;
+}
+
+/* Campos de texto, selectores y comentarios */
+#formularioAlquiler input:not([type="radio"]):not([type="checkbox"]),
+#formularioAlquiler select,
+#formularioAlquiler textarea {
+    display: block;
+    width: 70%;
+    max-width: 80%;
+    margin-bottom: var(--espaciado-grande);
+    padding: var(--espaciado-mediano);
+    border: 1px solid var(--Gris-Asfalto);
+    border-radius: 0.25rem;
+    font: inherit;
+}
+
+/* Evita que el usuario ensanche el área de comentarios */
+#formularioAlquiler textarea {
+    resize: vertical;
+}
+
+/* Opciones de plan: radio y etiqueta en línea */
+#formularioAlquiler input[type="radio"] {
+    display: inline-block;
+    margin: 0 var(--espaciado-pequeño) var(--espaciado-grande) 0;
+}
+
+#formularioAlquiler input[type="radio"] + label {
+    display: inline-block;
+    margin: 0 var(--espaciado-grande) var(--espaciado-grande) 0;
+}
+
+/* Casilla de políticas */
+#formularioAlquiler input[type="checkbox"] {
+    display: inline-block;
+    margin: var(--espaciado-mediano);
+}
+
+/* Foco visible */
+#formularioAlquiler input:focus,
+#formularioAlquiler select:focus,
+#formularioAlquiler textarea:focus {
+    outline: 2px solid var(--Verde-Ruta);
+    outline-offset: 2px;
+}
+
+/* Botón de envío */
+#formularioAlquiler button {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--Verde-Ruta);
+    border-radius: 0.5rem;
+    background-color: var(--Verde-Ruta);
+    color: #FFFFFF;
+    font: inherit;
+    cursor: pointer;
+}
+
+#formularioAlquiler button:hover {
+    background-color: var(--Azul-Noche);
+    border-color: var(--Azul-Noche);
+}
+
+.whatsapp{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+
+    & img{
+        width: 70px;
+        
+    }
+
+}
+

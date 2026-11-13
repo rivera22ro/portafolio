@@ -1,0 +1,85 @@
+Request URL http://127.0.0.1:5500/index.html
+Request method GET
+Status code 304 Not Modified
+Remote address 127.0.0.1:5500
+
+Request URL http://127.0.0.1:5500/promociones.html
+Request method GET
+Status code 404 Not Found
+Remote address 127.0.0.1:5500
+Referrer policy strict-origin-when-cross-origin
+
+Request URL
+http://127.0.0.1:5500/paginas/tarifas.html
+Request method
+GET
+Status code
+304 Not Modified
+Remote address
+127.0.0.1:5500
+Referrer policy
+strict-origin-when-cross-origin
+
+Request URL
+http://127.0.0.1:5500/paginas/reservas.html
+Request method
+GET
+Status code
+304 Not Modified
+Remote address
+127.0.0.1:5500
+Referrer policy
+strict-origin-when-cross-origin
+
+Request URL
+http://127.0.0.1:5500/index.html
+Request method
+GET
+Status code
+304 Not Modified
+Remote address
+127.0.0.1:5500
+Referrer policy
+strict-origin-when-cross-origin
+
+pruebas 
+1 ingreso 2 caracteres en nombre no me deja enviar el formulario me sale una alarma para que aumente minimo 3 caracteres
+2 ingreso menos numeros de los permitidos y salta la alarma 
+3 no marque la aceptacion de politicas y salta la alarma
+4 no seleciono ninguna bicicleta y salta la almarma 
+5 ingreso el correo sin @ y salta la alarma 
+6 ingreso menos numeros de celular y salta la alarma 
+7 no escribo ningun comentario y me deja enviar el formulario 
+8 me obliga a elegir almenos 1 hora 
+9 se puede navegar con el teclado 
+
+
+Verde Ruta #1E7A4F Botones y enlaces
+
+Naranja Pedal #F39A2B Destacados y botones secundarios
+
+Azul Noche #14213D Títulos y encabezado
+
+Crema #FAF6EF Fondo general 
+
+Gris Asfalto #5B6470 Texto secundario
+
+#F4F4F4 #1E7A4F  4.83:1  aprobado
+#F4f4f4 #F39A2B 2.01:1 no pasa
+#14213D #F39A2B 7.2:1 aprobado
+#14213D #FAF6EF 14.82:1 aprobado 
+#5B6470 #FAF6EF 5.56:1 aprobado
+#1E7A4F #FAF6EF 4.93:1 aprobado
+#F39A2B #FAF6EF 2.05:1 no pasa
+#F4F4F4  #14213D 14.52:1 pasa
+
+
+Problema: La clase .activo no aplicaba el color verde al enlace Inicio.
+
+Causa: El selector #menu a tenía mayor especificidad (1-0-1) que .activo (0-1-0), por eso prevalecía el color gris.
+
+Solución: Cambié .activo por #menu a.activo, que tiene mayor especificidad (1-1-1).
+
+Verificación: Recargué la página y comprobé en DevTools que el enlace activo apareciera en verde, sin usar !important ni estilos en línea.
+
+width 764px

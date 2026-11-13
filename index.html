@@ -1,121 +1,224 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Portafolio profesional de Ronaldo Rivera, desarrollador web en formación.">
-
     <title>Ronaldo Rivera | Desarrollador Web</title>
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased scroll-smooth">
 
-    <header class="encabezado">
+    <!-- ENCABEZADO -->
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+            <a href="#inicio" class="text-2xl font-extrabold tracking-tight text-white">
+                RR<span class="text-cyan-400">.</span>
+            </a>
 
-        <a href="#inicio" class="logo">
-            RR<span>.</span>
-        </a>
-
-        <nav class="navegacion" aria-label="Navegación principal">
-            <ul class="menu">
-                <li><a href="#inicio" class="activo">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#formacion">Formación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-
+            <nav aria-label="Navegación principal">
+                <ul class="hidden gap-6 text-sm font-medium md:flex">
+                    <li><a href="#inicio" class="text-cyan-400 transition hover:text-cyan-300">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="transition hover:text-cyan-400">Sobre mí</a></li>
+                    <li><a href="#tecnologias" class="transition hover:text-cyan-400">Tecnologías</a></li>
+                    <li><a href="#proyectos" class="transition hover:text-cyan-400">Proyectos</a></li>
+                    <li><a href="#formacion" class="transition hover:text-cyan-400">Formación</a></li>
+                    <li><a href="#contacto" class="transition hover:text-cyan-400">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
 
-        <section id="inicio" class="inicio">
+        <!-- INICIO -->
+        <section id="inicio" class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2">
 
-            <article class="presentacion">
-
-                <p class="etiqueta">
+            <article>
+                <p class="mb-4 text-sm font-semibold tracking-widest text-cyan-400">
                     BIENVENIDO A MI PORTAFOLIO
                 </p>
 
-                <h1>
-                    Hola, soy <span>Ronaldo Rivera</span>
+                <h1 class="text-4xl font-extrabold leading-tight text-white md:text-6xl">
+                    Hola, soy <span class="text-cyan-400">Ronaldo Rivera</span>
                 </h1>
 
-                <h2>
+                <h2 class="mt-4 text-xl font-medium text-slate-400">
                     Desarrollador web en formación
                 </h2>
 
-                <p class="descripcion">
-                    Me apasiona la tecnología y el desarrollo de
-                    soluciones digitales. Actualmente estoy
-                    fortaleciendo mis conocimientos en HTML,
-                    CSS y herramientas de desarrollo.
+                <p class="mt-6 max-w-xl leading-relaxed text-slate-400">
+                    Me apasiona la tecnología y el desarrollo de soluciones digitales.
+                    Actualmente estoy fortaleciendo mis conocimientos en HTML, CSS y herramientas de desarrollo.
                 </p>
 
-                <section class="acciones">
-
-                    <a href="#proyectos" class="boton-principal">
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#proyectos"
+                       class="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400">
                         Ver mis proyectos
                     </a>
-
-                    <a href="#contacto" class="boton-secundario">
+                    <a href="#contacto"
+                       class="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-slate-200 transition hover:border-cyan-400 hover:text-cyan-400">
                         Contactarme
                     </a>
-
-                </section>
-
+                </div>
             </article>
 
-            <aside class="tarjeta-perfil">
+            <aside class="rounded-2xl border border-slate-800 bg-slate-900 p-8 shadow-xl shadow-cyan-500/5">
+                <p class="text-xs font-semibold tracking-widest text-slate-500">DEVELOPER PROFILE</p>
 
-                <p>DEVELOPER PROFILE</p>
+                <span class="mt-4 block text-5xl font-bold text-cyan-400">&lt;/&gt;</span>
 
-                <span class="simbolo">&lt;/&gt;</span>
+                <h2 class="mt-4 text-2xl font-bold text-white">Ronaldo Rivera</h2>
 
-                <h2>Ronaldo Rivera</h2>
+                <p class="mt-2 text-slate-400">HTML · CSS · Git · GitHub</p>
 
-                <p>HTML · CSS · Git · GitHub</p>
-
-                <span class="estado">
+                <span class="mt-6 inline-block rounded-full bg-emerald-500/10 px-4 py-1 text-sm font-medium text-emerald-400">
                     Disponible para aprender y crecer
                 </span>
-
             </aside>
-
         </section>
 
-        <section id="sobre-mi" class="seccion">
-            <h2>Sobre mí</h2>
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="border-t border-slate-800 bg-slate-900/50 py-20">
+            <div class="mx-auto max-w-4xl px-6 text-center">
+                <h2 class="text-3xl font-bold text-white">Sobre mí</h2>
+                <div class="mx-auto mt-2 h-1 w-16 rounded bg-cyan-400"></div>
+
+                <p class="mt-8 text-lg leading-relaxed text-slate-400">
+                    Soy una persona apasionada por la tecnología y con una mente innovadora.
+                    Me gusta转 transformar ideas en soluciones digitales claras y funcionales,
+                    y disfruto aprender cada día nuevas herramientas que me permitan crear
+                    experiencias útiles y atractivas.
+                </p>
+            </div>
         </section>
 
-        <section id="tecnologias" class="seccion">
-            <h2>Tecnologías</h2>
+        <!-- TECNOLOGÍAS -->
+        <section id="tecnologias" class="mx-auto max-w-6xl px-6 py-20">
+            <h2 class="text-center text-3xl font-bold text-white">Tecnologías</h2>
+            <div class="mx-auto mt-2 h-1 w-16 rounded bg-cyan-400"></div>
+
+            <ul class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+                <li class="rounded-xl border border-slate-800 bg-slate-900 p-6 text-center transition hover:-translate-y-1 hover:border-orange-500">
+                    <span class="text-lg font-bold text-orange-400">HTML5</span>
+                </li>
+                <li class="rounded-xl border border-slate-800 bg-slate-900 p-6 text-center transition hover:-translate-y-1 hover:border-blue-500">
+                    <span class="text-lg font-bold text-blue-400">CSS3</span>
+                </li>
+                <li class="rounded-xl border border-slate-800 bg-slate-900 p-6 text-center transition hover:-translate-y-1 hover:border-cyan-400">
+                    <span class="text-lg font-bold text-cyan-400">Tailwind</span>
+                </li>
+                <li class="rounded-xl border border-slate-800 bg-slate-900 p-6 text-center transition hover:-translate-y-1 hover:border-purple-500">
+                    <span class="text-lg font-bold text-purple-400">Bootstrap</span>
+                </li>
+                <li class="rounded-xl border border-slate-800 bg-slate-900 p-6 text-center transition hover:-translate-y-1 hover:border-red-500">
+                    <span class="text-lg font-bold text-red-400">Git</span>
+                </li>
+                <li class="rounded-xl border border-slate-800 bg-slate-900 p-6 text-center transition hover:-translate-y-1 hover:border-slate-400">
+                    <span class="text-lg font-bold text-slate-200">GitHub</span>
+                </li>
+            </ul>
         </section>
 
-        <section id="proyectos" class="seccion">
-            <h2>Mis proyectos</h2>
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="border-t border-slate-800 bg-slate-900/50 py-20">
+            <div class="mx-auto max-w-6xl px-6">
+                <h2 class="text-center text-3xl font-bold text-white">Mis proyectos</h2>
+                <div class="mx-auto mt-2 h-1 w-16 rounded bg-cyan-400"></div>
+
+                <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Portafolio -->
+                    <article class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500/50">
+                        <h3 class="text-xl font-bold text-white">Portafolio</h3>
+                        <p class="mt-2 text-sm text-slate-400">Esta misma página, creada como mi carta de presentación.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-400">HTML</span>
+                            <span class="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400">Tailwind</span>
+                        </div>
+                        <a href="./index.html"
+                           class="mt-auto pt-6 font-semibold text-cyan-400 transition hover:text-cyan-300">
+                            Ver proyecto →
+                        </a>
+                    </article>
+
+                    <!-- Rueda Libre -->
+                    <article class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500/50">
+                        <h3 class="text-xl font-bold text-white">Rueda Libre</h3>
+                        <p class="mt-2 text-sm text-slate-400">Sitio con mapa, reservas y tarifas.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-400">HTML</span>
+                            <span class="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-400">CSS</span>
+                            <span class="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400">Tailwind</span>
+                        </div>
+                        <a href="./rueda-libre/index.html"
+                           class="mt-auto pt-6 font-semibold text-cyan-400 transition hover:text-cyan-300">
+                            Ver proyecto →
+                        </a>
+                    </article>
+
+                    <!-- Ruta Nocturna -->
+                    <article class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500/50">
+                        <h3 class="text-xl font-bold text-white">Ruta Nocturna</h3>
+                        <p class="mt-2 text-sm text-slate-400">Proyecto de página con diseño moderno.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-400">HTML</span>
+                            <span class="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400">Tailwind</span>
+                        </div>
+                        <a href="./ruta-nocturno/index.html"
+                           class="mt-auto pt-6 font-semibold text-cyan-400 transition hover:text-cyan-300">
+                            Ver proyecto →
+                        </a>
+                    </article>
+
+                    <!-- Bootstrap -->
+                    <article class="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500/50">
+                        <h3 class="text-xl font-bold text-white">Práctica Bootstrap</h3>
+                        <p class="mt-2 text-sm text-slate-400">Pruebas con el framework Bootstrap.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-400">HTML</span>
+                            <span class="rounded-full bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-400">Bootstrap</span>
+                        </div>
+                        <a href="./rueda-libre/pruebas/boobtstrap.html"
+                           class="mt-auto pt-6 font-semibold text-cyan-400 transition hover:text-cyan-300">
+                            Ver proyecto →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
         </section>
 
-        <section id="formacion" class="seccion">
-            <h2>Formación</h2>
+        <!-- FORMACIÓN -->
+        <section id="formacion" class="mx-auto max-w-6xl px-6 py-20">
+            <h2 class="text-center text-3xl font-bold text-white">Formación</h2>
+            <div class="mx-auto mt-2 h-1 w-16 rounded bg-cyan-400"></div>
         </section>
 
-        <section id="contacto" class="seccion">
-            <h2>Contacto</h2>
+        <!-- CONTACTO -->
+        <section id="contacto" class="border-t border-slate-800 bg-slate-900/50 py-20">
+            <div class="mx-auto max-w-6xl px-6 text-center">
+                <h2 class="text-3xl font-bold text-white">Contacto</h2>
+                <div class="mx-auto mt-2 h-1 w-16 rounded bg-cyan-400"></div>
+            </div>
         </section>
 
     </main>
 
-    <footer class="pie-pagina">
+    <!-- PIE DE PÁGINA -->
+    <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
         <p>© 2026 Ronaldo Rivera. Todos los derechos reservados.</p>
     </footer>
 
 </body>
 </html>
+
+
+
+
+
+
+
