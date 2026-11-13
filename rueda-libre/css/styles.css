@@ -20,10 +20,6 @@
   --espaciado-grande: 1rem;
 }
 
-
-/* 1. Todos los elementos incluyen padding y border en su ancho */
-
-
 /* 2. Estilos generales */
 body {
     margin: 0;
@@ -36,7 +32,7 @@ body {
     justify-content: space-between; /* da espaciado entre los componentes */
 }
 
-/* 3. Contenido principal centrado */
+
 main {
     width: 100%;
     max-width: 70rem;
@@ -44,7 +40,6 @@ main {
     padding: var(--espaciado-grande);
 }
 
-/* 4. Portada: en tu HTML corresponde al header */
 header {
     min-height: auto;
     padding: 1rem 2rem;
@@ -64,7 +59,7 @@ header > img {
 }
 
 
-/* Títulos */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titulos);
     font-weight: 600;
@@ -128,7 +123,7 @@ footer a {
 
 
 
-/* Botón para reservar */
+
 .btn-reservar {
     display: inline-block;
     background-color: var(--Verde-Ruta);
@@ -151,9 +146,6 @@ footer a {
     outline-offset: 3px;
 }
 
-
-
-/* Foco visible en los campos */
 input:focus,
 select:focus,
 textarea:focus {
@@ -163,10 +155,14 @@ textarea:focus {
 
 
 /* Tabla */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1rem;
 }
 
 /* Celdas y encabezados */
@@ -193,6 +189,8 @@ th {
     border-radius: 0.5rem;
     display: flex;
     gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .electrica {
