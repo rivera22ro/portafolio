@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    background-color: #080D18;
+    color: #F1F5F9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.encabezado {
+    width: 100%;
+    min-height: 75px;
+    padding: 1rem 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #0D1423;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #1E293B;
+}
+
+.logo {
+    color: #38BDF8;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+   
+}
+
+.logo span {
+    color: #A78BFA;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.menu a {
+    color: #CBD5E1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible,
+.menu a.activo {
+    color: #38BDF8;
+}
+
+
+
+
+
+.inicio {
+    min-height: 100vh;
+    padding: 8rem 8% 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            #152C48 0%,
+            #080D18 50%
+        );
+}
+
+.presentacion {
+    max-width: 650px;
+}
+
+.etiqueta {
+    color: #38BDF8;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.presentacion h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.presentacion h1 span {
+    color: #38BDF8;
+}
+
+.presentacion h2 {
+    color: #A78BFA;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 1.5rem;
+}
+
+.descripcion {
+    color: #AAB6C8;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+/* =================================
+   4. BOTONES
+================================= */
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.boton-principal,
+.boton-secundario {
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.boton-principal {
+    background-color: #38BDF8;
+    color: #080D18;
+    font-weight: bold;
+}
+
+.boton-principal:hover {
+    background-color: #7DD3FC;
+    transform: translateY(-3px);
+}
+
+.boton-secundario {
+    border: 1px solid #38BDF8;
+    color: #38BDF8;
+}
+
+.boton-secundario:hover {
+    background-color: #38BDF8;
+    color: #080D18;
+}
+
+/* =================================
+   5. TARJETA DE PERFIL
+================================= */
+
+.tarjeta-perfil {
+    width: min(100%, 320px);
+    min-height: 320px;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    background-color: #111C30;
+    border: 1px solid #263D5D;
+    border-radius: 20px;
+
+    box-shadow: 0 0 35px #38BDF820;
+
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-perfil:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta-perfil > p:first-child {
+    color: #38BDF8;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+.simbolo {
+    color: #38BDF8;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 20px #38BDF8;
+}
+
+.estado {
+    color: #86EFAC;
+    font-size: 0.85rem;
+}
+
+/* =================================
+   6. SECCIONES
+================================= */
+
+.seccion {
+    min-height: 100vh;
+    padding: 7rem 8% 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid #1E293B;
+}
+
+.seccion h2 {
+    color: #38BDF8;
+    font-size: 2.5rem;
+}
+
+/* =================================
+   7. PIE DE PÁGINA
+================================= */
+
+.pie-pagina {
+    padding: 1.5rem;
+    text-align: center;
+    color: #94A3B8;
+    background-color: #0D1423;
+}
+
+/* =================================
+   8. DISEÑO RESPONSIVE
+================================= */
+
+@media (max-width: 850px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem 1.2rem;
+    }
+
+    .inicio {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .descripcion {
+        margin: auto;
+    }
+
+    .acciones {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .encabezado {
+        position: sticky;
+    }
+
+    .menu {
+        gap: 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .inicio {
+        padding: 3rem 6%;
+    }
+
+    .tarjeta-perfil {
+        min-height: 260px;
+    }
+
+    .seccion {
+        padding: 5rem 6%;
+    }
+
+}
